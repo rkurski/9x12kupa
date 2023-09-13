@@ -123,6 +123,12 @@ var inter = setInterval(
       }
   }, 200)
 }
+  for (var i in GAME) {
+    if (i.indexOf('socxxx') === 0 && i.lastIndexOf('ket') + 3 === i.length) {
+      GAME.socket = GAME[i]
+      break
+    }
+  }
 
 function kill_players1(){
 var aaa = $("#player_list_con").find(".player button"+"[data-option=pvp_attack]"+"[data-quick=1]"+":not(.initial_hide_forced)");
